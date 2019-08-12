@@ -2,11 +2,9 @@
 
 This application goes along with the Build a GraphQL CRUD application with Node and React - 2 part tutorial series. 
 
-https://www.techandstartup.com/tutorials/build-a-graphql-api-with-node-and-apollo-server
+Part 1: Build a GraphQL API with Node.js and Apollo-Server Tutorial can be read at: https://www.techandstartup.com/tutorials/build-a-graphql-api-with-node-and-apollo-server
 
-Part 2: Build a React app with GraphQL Tutorial can be read at:
-
-https://www.techandstartup.com/tutorials/build-a-react-app-with-graphql
+Part 2: Build a React app with GraphQL Tutorial can be read at: https://www.techandstartup.com/tutorials/build-a-react-app-with-graphql
 
 Similarly there are two parts to this app:
 
