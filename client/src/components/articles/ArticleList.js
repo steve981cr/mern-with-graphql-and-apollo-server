@@ -13,7 +13,7 @@ function ArticleList() {
         </Link> 
       </h2>
       <Query query={GET_ARTICLES}> 
-        {function({ loading, error, data }) {
+        {function({ loading, error, data }) { 
           if (loading) return "Loading...";
           if (error) return `Error! ${error.message}`;
           const { articles } = data; 
@@ -34,4 +34,4 @@ function ArticleList() {
   )
 }
 
-export default ArticleList;
+export default ArticleList

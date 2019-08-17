@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "GraphQL API built with Node.js, Apollo-Server, MongoDB, and React",
   "main": "server.js",
+  "proxy": "http://localhost:4000",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js",
+    "start": "node server.js",
     "dev": "concurrently \"nodemon server.js\" \"cd client && npm run start\""
   },
   "keywords": [],

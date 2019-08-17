@@ -16,7 +16,15 @@ function ArticleAdd(props) {
               onSubmit={function(event) { 
                 event.preventDefault(); 
                 createArticle({ variables: { title: title.value, content: content.value }, 
-                  refetchQueries: [{query: GET_ARTICLES}] 
+                  refetchQueries: [{query: GET_ARTICLES}]
+                  // Alternative to above, updates cache w/o new query:
+                  // update(cache, { data: { createArticle } }) {
+                  //   const { articles } = cache.readQuery({ query: GET_ARTICLES });
+                  //   cache.writeQuery({
+                  //     query: GET_ARTICLES,
+                  //     data: { articles: articles.concat([createArticle]) },
+                  //   });
+                  // }
                 });
                 props.history.push("/articles"); 
               }}
@@ -33,8 +41,10 @@ function ArticleAdd(props) {
                   ref={function(node) { return content = node; }} 
                 />
               </div>
-              <button type="submit" className="btn btn-primary">Submit</button>
-              <Link to="/articles" className="btn btn-secondary float-right">Cancel</Link>
+              <p className="btn-group">
+                <button type="submit" className="btn btn-primary">Submit</button>
+               <Link to="/articles" className="btn btn-secondary">Cancel</Link>
+              </p>
             </form>
           </div>
         )}

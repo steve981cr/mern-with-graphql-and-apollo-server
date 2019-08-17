@@ -24,7 +24,7 @@ function ArticleEdit(props) {
                     <form
                       onSubmit={function(event) {
                         event.preventDefault();
-                        updateArticle({
+                        updateArticle({ 
                           variables: {
                             id: article.id,
                             title: title.value,
@@ -46,9 +46,11 @@ function ArticleEdit(props) {
                           defaultValue={article.content} 
                           ref={function(node) { return content = node; }} />
                       </div>
-                      <button type="submit" className="btn btn-primary">Update</button>
-                      <button type="button" className="btn btn-secondary float-right" 
+                      <div className="btn-group">
+                        <button type="submit" className="btn btn-primary">Update</button>
+                        <button type="button" className="btn btn-secondary" 
                           onClick={function() { handleCancel(article.id) }}>Cancel</button>
+                      </div>
                     </form>
                     {loading && <p>Loading...</p>}
                     {error && <p>Error : {error.message}</p>}

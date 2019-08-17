@@ -24,7 +24,15 @@ function ArticleInfo(props) {
                       onClick={() => { 
                         deleteArticle({ 
                           variables: { id: article.id }, 
-                          refetchQueries: [{query: GET_ARTICLES}] 
+                          refetchQueries: [{query: GET_ARTICLES}]
+                          // Alternative to above, updates cache w/o new query:
+                          // update(cache, { data: { createArticle } }) {
+                          //   const { articles } = cache.readQuery({ query: GET_ARTICLES });
+                          //   cache.writeQuery({
+                          //     query: GET_ARTICLES,
+                          //     data: { articles: articles.filter(a => (a.id !== article.id)) },
+                          //   });
+                          // }
                         });
                         props.history.push("/articles"); 
                       }}
