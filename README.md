@@ -14,7 +14,7 @@ To install the API's dependencies run:
 
 npm install
 
-The Client is built with React.js and is contained in the client folder. It was generated with create-react-app. It uses Apollo Client for interacting with the GraphQL API. 
+2) The Client is built with React.js and is contained in the client folder. It was generated with create-react-app. It uses Apollo Client for interacting with the GraphQL API. 
 
 To install the client packages from the client directory run: 
 
