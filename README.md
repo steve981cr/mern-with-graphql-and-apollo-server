@@ -8,7 +8,7 @@ Part 2: Build a React app with GraphQL Tutorial can be read at: https://www.tech
 
 Similarly there are two parts to this app:
 
-1) The API uses Node.js and Apollo-Server as the GraphQL Server and GraphQL as the query language. It does not use Express (although Express can be added to it). It uses MongoDB and the Mongoose.js ORM as it's database. To use this app you need to connect your own MongoDB in the server.js file.
+1) The API uses Node with the Express web framework and Apollo-Server as the GraphQL Server and GraphQL as the query language. It uses MongoDB and the Mongoose.js ORM as it's database. To use this app you need to connect your own MongoDB in the server.js file.
 
 To install the API's dependencies run:
 
